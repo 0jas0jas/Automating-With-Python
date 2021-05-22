@@ -2,7 +2,7 @@
 - Looks for the URL in your clipboard or the URL you pasted
 - Uses BeautifulSoup V4 to parse your provided HTML file
 - Makes a new HTML file by the name 'cleaned.HTML' (Included in the folder)
-- Opens the recently created HTML using the Browser Library provided by Python
+- Opens the recently created HTML using the WebBrowser Library provided by Python
 
 ### Installation
 Installation is easy. You need some requirements before working with 'cleaner.py'. To install the requirements, just run the 'requirements.txt' file provided in the folder.
