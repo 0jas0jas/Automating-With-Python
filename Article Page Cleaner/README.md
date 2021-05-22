@@ -1,4 +1,4 @@
-#Article Page Cleaner
+# Article Page Cleaner
 - Looks for the URL in your clipboard or the URL you pasted
 - Uses BeautifulSoup V4 to parse your provided HTML file
 - Makes a new HTML file by the name 'cleaned.HTML' (Included in the folder)
