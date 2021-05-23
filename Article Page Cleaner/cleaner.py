@@ -5,6 +5,7 @@ import webbrowser, sys, pyperclip, bs4, requests, os
 from pathlib import Path
 import time
 
+print("Searching for your URL...")
 if len(sys.argv) > 1:
 # Get address from command line.
     address = ' '.join(sys.argv[1:])
@@ -105,5 +106,6 @@ cleaned.write(article)
 cleaned.write('</body></html>')
 cleaned.close()
 
+print("Okay Done. Opening your file...")
 filename = 'file:///'+os.getcwd()+'/' + 'cleaned.html'
 webbrowser.open(filename)
