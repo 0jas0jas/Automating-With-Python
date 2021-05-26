@@ -10,13 +10,6 @@ size_dirs = [
     "More than 20Mb",
 ]
 
-date_dirs = [
-    "Insert Something Here",
-    "/<10Mb",
-    "/<20Mb",
-    "/>20Mb",
-]
-
 
 print("Welcome to your file organiser.\nThis is just an example of how much you can do with automation by python.")
 print("How would you like to organise your files today. They will be kept neatly in seperate folders.\n")
@@ -40,20 +33,20 @@ if (type_organise == 1):
     for dirs in size_dirs:
         new_dir = os.path.join(cwd, dirs)
         os.mkdir(new_dir)
-        for file in files:
-            file_path = os.path.join(cwd, file)
-            if (os.path.getsize(file_path) < 1048576):
-                move_path = os.path.join(cwd, size_dirs[0])
-                shutil.copy(file_path, move_path)
-            elif (os.path.getsize(file_path) < 10485760):
-                move_path = os.path.join(cwd, size_dirs[1])
-                shutil.copy(file_path, move_path)
-            elif (os.path.getsize(file_path) < 20971520):
-                move_path = os.path.join(cwd, size_dirs[2])
-                shutil.copy(file_path, move_path)
-            elif (os.path.getsize(file_path) > 20971520):
-                move_path = os.path.join(cwd, size_dirs[3])
-                shutil.copy(file_path, move_path)
+    for file in files:
+        file_path = os.path.join(cwd, file)
+        if (os.path.getsize(file_path) < 1048577):
+            move_path = os.path.join(cwd, size_dirs[0])
+            shutil.copy(file_path, move_path)
+        elif (os.path.getsize(file_path) < 10485761 and os.path.getsize(file_path) > 1048576):
+            move_path = os.path.join(cwd, size_dirs[1])
+            shutil.copy(file_path, move_path)
+        elif (os.path.getsize(file_path) < 20971521 and os.path.getsize(file_path) > 10485760):
+            move_path = os.path.join(cwd, size_dirs[2])
+            shutil.copy(file_path, move_path)
+        elif (os.path.getsize(file_path) > 20971520):
+            move_path = os.path.join(cwd, size_dirs[3])
+            shutil.copy(file_path, move_path)
     for file in files:
         file_path = os.path.join(cwd, file)
         os.unlink(file_path) 
