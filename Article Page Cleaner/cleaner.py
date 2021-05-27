@@ -17,7 +17,7 @@ address = requests.get(address)
 
 address.raise_for_status()
 noStarchSoup = bs4.BeautifulSoup(address.text, 'html.parser')
-elems = noStarchSoup.select('h1, p' )
+elems = noStarchSoup.select('h1, h2, h3, h4, h5, h6, p' )
 if os.path.isfile('cleaned.html'):
     os.remove('cleaned.html')
 
