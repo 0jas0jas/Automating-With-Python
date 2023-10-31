@@ -1,9 +1,9 @@
 # Automating-With-Python
 ## _Demonstating Automation By Python
 
-[UnsolicitedSite](https://unsolicitedsite.co.in)
+[UnsolicitedSite]([https://unsolicitedsite.co.in](https://unsolicitedsite.netlify.app/))
 
-[Article](https://unsolicitedsite.co.in/blogpage/posts/post5/post.html)
+[Article](https://unsolicitedsite.netlify.app/blogpage/posts/post5/post.html)
 
 This is a repo containing some very simple automation programs made in python by me. They could help you with your daily work or you could just try them for fun.
 The instructions on how to use any of these programs is mentioned in this README file.
